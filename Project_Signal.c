@@ -94,10 +94,10 @@ int main()
 // printWelcomeAndRules - Print welcome message and rules
 void printWelcomeAndRules()
 {
-    printf("Welcome to \"MAGSHIMIM CODE-BREAKER\"!!!\n\n");
-    printf("A secret password was chosen to protect the credit card of Pancratius,\n");
-    printf("the descendant of Antiochus.\n");
-    printf("Your mission is to stop Pancratius by revealing his secret password.\n\n");
+    printf("The game is called \"Bulls and Cows\".\n");
+    printf("The game is played between you and the computer.\n");
+    printf("The computer will choose a secret password of 4 distinct digits.\n");
+    printf("Your goal is to guess the password.\n");
     printf("The rules are as follows:\n");
     printf("1. In each round you try to guess the secret password (4 distinct digits)\n");
     printf("2. After every guess you'll receive two hints about the password\n");
@@ -105,7 +105,7 @@ void printWelcomeAndRules()
     printf("   MISSES: The number of digits in your guess which belongs to\n");
     printf("           the password but were miss-placed.\n");
     printf("3. If you'll fail to guess the password after a certain number of rounds\n");
-    printf("   Pancratius will buy all the gifts for Hanukkah!!!\n\n");
+    printf("   You will lose!\n\n");
 }
 
 // getDifficultyLevel - Get the difficulty level from the user
@@ -236,15 +236,14 @@ void playGame(int amountOfGuesses)
     {
         // Print a winning message
         printf("\t4 HITS YOU WON!!!\n\n");
-        printf("It took you only %d guesses; you are a professional code breaker!\n", hits + misses);
+        printf("It took you only %d guesses!\n", hits + misses);
         return;
     }
     else
     {
         // Print a losing message
-        printf("OOOOHHHH!!! Pancratius won and bought all of Hanukkah's gifts.\n");
-        printf("Nothing left for you...\n");
         printf("The secret password was %d\n", randomNumber);
+        printf("You lost, try again!\n\n");
         return;
     }
 }
